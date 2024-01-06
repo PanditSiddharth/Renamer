@@ -36,7 +36,7 @@ try {
   let s: any = await bot.telegram.getFileLink(doc.file_id)
     .catch((err: any) => {ctx.reply(err.message)})
 
-    let m = doc.file_name.match(/(.pdf|.doc|.docx|.xls|.xlsx|.ppt|.pptx|.odt|.ods|.odp|.txt|.rtf|.csv|.pages|.numbers|.key|.mp3|.mp4|.avi|.mov|.wmv|.mkv|.flv|.gif|.png|.jpg|.jpeg|.dat|.bmp|.webp)$/i)
+    let m = doc.file_name.match(/(.pdf|.doc|.docx|.xls|.xlsx|.ppt|.pptx|.odt|.ods|.odp|.txt|.rtf|.csv|.pages|.numbers|.key|.mp3|.mp4|.avi|.mov|.wmv|.mkv|.flv|.gif|.png|.jpg|.jpeg|.dat|.bmp|.webp|.apk|.js|.py)$/i)
 let r = ctx.message.text.substring(7).trim()
     if(r == "")
       return ctx.reply('Please write new name of file\nafter /rename command\nExample: /rename mynewfile').catch((err: any) => {ctx.reply(err.message)})
